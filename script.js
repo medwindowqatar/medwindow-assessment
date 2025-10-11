@@ -16,7 +16,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const totalSteps = steps.length;
 
     // Google Sheets Web App URL - Replace with your deployed script URL
-    const GOOGLE_SHEETS_URL = `AKfycbwbm_UMBVs7eAMCU64bK1FBQLv3unp9o3W9uQwmFVh4LMGS3dM8N98nF1vnw_5sEsPb`
+    const GOOGLE_SHEETS_URL = `AKfycbwbm_UMBVs7eAMCU64bK1FBQLv3unp9o3W9uQwmFVh4LMGS3dM8N98nF1vnw_5sEsPb/exec`
 
     // Specialty qualifications database by country
     const specialtyQualifications = {
