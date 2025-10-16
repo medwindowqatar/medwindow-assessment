@@ -1,0 +1,19 @@
+{
+  "version": "v7",
+  "countries_by_category": {
+    "Qatar": [
+      "Qatar"
+    ],
+    "Category 1": [
+      "United Kingdom",
+      "United States",
+      "Canada"
+    ],
+    "Category 2": [
+      "India",
+      "Pakistan",
+      "Egypt"
+    ],
+    "Other (specify)": []
+  }
+}

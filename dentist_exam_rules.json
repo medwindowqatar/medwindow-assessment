@@ -1,0 +1,13 @@
+{
+  "version": "v7",
+  "general_dentist": {
+    "requires_exam": true,
+    "format": "100 MCQs",
+    "duration_hours": 2.5,
+    "pass_mark_percent": 60
+  },
+  "specialist": {
+    "requires_exam_default": false,
+    "note": "Per DHP memo/case evaluation."
+  }
+}
