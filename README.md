@@ -1,1 +1,0 @@
-# MedWindow Assessment Tool
