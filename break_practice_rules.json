@@ -1,0 +1,127 @@
+{
+  "break_in_practice_rules": {
+    "threshold_months": 12,
+    "description": "Break in practice is defined as a gap of 12 months or more without active clinical practice",
+    
+    "overseas_applicants": {
+      "description": "For applicants currently residing outside Qatar",
+      "maximum_break_allowed_months": 24,
+      "recency_requirements": {
+        "0_to_12_months": {
+          "break_duration": "Less than 12 months",
+          "recency_period_months": 0,
+          "supervised_practice_months": 0,
+          "notes": "No break - proceed normally"
+        },
+        "12_to_18_months": {
+          "break_duration": "12-18 months",
+          "recency_period_months": 3,
+          "supervised_practice_months": 0,
+          "notes": "Must demonstrate 3 months recent clinical activity"
+        },
+        "18_to_24_months": {
+          "break_duration": "18-24 months",
+          "recency_period_months": 6,
+          "supervised_practice_months": 0,
+          "notes": "Must demonstrate 6 months recent clinical activity"
+        },
+        "over_24_months": {
+          "break_duration": "More than 24 months",
+          "recency_period_months": null,
+          "supervised_practice_months": null,
+          "notes": "Ineligible - break exceeds maximum allowed",
+          "eligible": false
+        }
+      }
+    },
+    
+    "qatar_residents": {
+      "description": "For applicants currently residing in Qatar (QID holders or family sponsorship)",
+      "no_maximum_break": true,
+      "supervised_practice_requirements": {
+        "0_to_12_months": {
+          "break_duration": "Less than 12 months",
+          "supervised_practice_months": 0,
+          "notes": "No break - proceed normally"
+        },
+        "12_to_24_months": {
+          "break_duration": "12-24 months",
+          "supervised_practice_months": 3,
+          "notes": "Must complete 3 months supervised practice in Qatar"
+        },
+        "24_to_36_months": {
+          "break_duration": "24-36 months",
+          "supervised_practice_months": 6,
+          "notes": "Must complete 6 months supervised practice in Qatar"
+        },
+        "36_to_60_months": {
+          "break_duration": "36-60 months (3-5 years)",
+          "supervised_practice_months": 12,
+          "notes": "Must complete 12 months supervised practice in Qatar"
+        },
+        "over_60_months": {
+          "break_duration": "More than 60 months (5+ years)",
+          "supervised_practice_months": 24,
+          "notes": "Must complete 24 months supervised practice in Qatar"
+        }
+      }
+    },
+    
+    "acceptable_break_exceptions": {
+      "maternity_paternity": {
+        "description": "Maternity or paternity leave",
+        "max_duration_months": 12,
+        "documentation_required": "Birth certificate or official leave documentation",
+        "counts_as_break": false
+      },
+      "medical_leave": {
+        "description": "Medical leave due to personal health issues",
+        "max_duration_months": 12,
+        "documentation_required": "Medical reports and doctor's certificate",
+        "counts_as_break": false
+      },
+      "further_education": {
+        "description": "Enrolled in accredited medical education/training program",
+        "max_duration_months": null,
+        "documentation_required": "Enrollment certificate and completion certificate",
+        "counts_as_break": false,
+        "notes": "Must be full-time accredited program"
+      },
+      "research_academic": {
+        "description": "Research or academic sabbatical with some clinical component",
+        "max_duration_months": 24,
+        "documentation_required": "University/institution letter confirming role and clinical component",
+        "counts_as_break": "partial",
+        "notes": "Must demonstrate some clinical involvement"
+      },
+      "covid_related": {
+        "description": "COVID-19 pandemic related interruptions (2020-2022)",
+        "max_duration_months": 18,
+        "documentation_required": "Employer letter or official documentation",
+        "counts_as_break": false
+      }
+    },
+    
+    "calculation_notes": [
+      "Break is calculated from last day of clinical practice to application date",
+      "Only qualifying clinical experience counts (see workplace type criteria)",
+      "Observership, training without patient care, and administrative roles count as break",
+      "Multiple short breaks are cumulative",
+      "Exceptions must be documented and verified"
+    ]
+  },
+  
+  "internship_requirements": {
+    "physicians": {
+      "minimum_months": 12,
+      "description": "Minimum 12 months rotating internship required",
+      "must_be_post_graduation": true
+    },
+    "dentists": {
+      "minimum_months": 12,
+      "description": "Minimum 12 months general dentistry internship required",
+      "must_be_post_graduation": true
+    }
+  }
+}
+

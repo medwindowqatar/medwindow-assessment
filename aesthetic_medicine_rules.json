@@ -1,0 +1,103 @@
+{
+  "aesthetic_medicine_requirements": {
+    "education_paths": {
+      "path_1_standalone_aesthetic": {
+        "description": "Standalone Aesthetic Medicine Training Program",
+        "requirements": [
+          "Bachelor's degree of Medicine from IMED FAIMER listed university",
+          "Certificate of successfully completion of an Aesthetic Medicine Training Program from accredited institute",
+          "Training program minimum duration: 1 year full-time",
+          "Program must include theoretical and practical components",
+          "Program must conclude with passing/exit exam",
+          "Core elements: Light-based therapies, Cosmetic injectables, Skin rejuvenation, Patient Safety, Surgical Anatomy"
+        ],
+        "experience_required": "3 years clinical experience in Aesthetic Medicine after training program",
+        "license_required": true
+      },
+      "path_2_dermatology": {
+        "description": "Dermatology specialty with Aesthetic Medicine training",
+        "requirements": [
+          "Bachelor's degree of Medicine from IMED FAIMER listed university",
+          "Certificate of completion of training in Dermatology",
+          "No additional Aesthetic Medicine training required"
+        ],
+        "experience_required": "3 years clinical experience in Aesthetic Medicine after dermatology training",
+        "license_required": true
+      },
+      "path_3_plastic_surgery": {
+        "description": "Plastic Surgery specialty with Aesthetic Medicine training",
+        "requirements": [
+          "Bachelor's degree of Medicine from IMED FAIMER listed university",
+          "Certificate of completion of training in Plastic Surgery",
+          "Additional Aesthetic Medicine Program (minimum 1 month)",
+          "Additional program must include theoretical and practical components",
+          "Core elements: Light-based therapies, Cosmetic injectables, Skin rejuvenation, Patient Safety, Surgical Anatomy"
+        ],
+        "experience_required": "3 years clinical experience in Aesthetic Medicine after plastic surgery training",
+        "license_required": true
+      },
+      "path_4_gp_with_training": {
+        "description": "General Practitioner with Aesthetic Medicine training",
+        "requirements": [
+          "Bachelor's degree of Medicine from IMED FAIMER listed university",
+          "Certificate of successfully completion of an Aesthetic Medicine Training Program from accredited institute",
+          "Training program minimum duration: 1 year full-time",
+          "Program must include theoretical and practical components",
+          "Program must conclude with passing/exit exam"
+        ],
+        "experience_required": "3 years clinical experience in Aesthetic Medicine after training program",
+        "license_required": true
+      }
+    },
+    "non_resident_requirements": {
+      "total_experience_years": 5,
+      "description": "Total of 5 years clinical experience in Aesthetic Medicine, Dermatology, or Plastic Surgery after postgraduate degree (including mandatory 3 years)",
+      "supervision_letter_required": true,
+      "supervisor_specialties": ["Aesthetic Medicine", "Dermatology", "Plastic & Reconstructive Surgery"]
+    },
+    "scope_limitations": [
+      "No surgical interventions (e.g., facelifts, liposuction, blepharoplasty)",
+      "No deep reconstructive procedures (e.g., post-burn facial reconstruction)",
+      "No invasive plastic surgery requiring general anesthesia",
+      "No systemic medical treatments outside aesthetic medicine scope"
+    ],
+    "core_privileges": {
+      "facial_procedures": [
+        "Botox Injection",
+        "Dermal Fillers",
+        "Thread lift",
+        "Microneedling with or without PRP",
+        "PRP (Platelet-Rich Plasma)",
+        "Mesotherapy (minimally invasive)",
+        "Comedone Extraction"
+      ],
+      "body_contouring": [
+        "Cryolipolysis (fat freezing)",
+        "Laser Lipolysis",
+        "Radiofrequency Lipolysis",
+        "Radiofrequency Skin Tightening",
+        "Ultrasound and Laser-Based Fat Reduction",
+        "Injection Lipolysis"
+      ],
+      "skin_rejuvenation": [
+        "Chemical Peeling",
+        "Crystal Peel (Microdermabrasion)",
+        "Mechanical Peel",
+        "Laser resurfacing of the face",
+        "Laser Therapy",
+        "Dermojet",
+        "Non-surgical benign mole removal"
+      ],
+      "diagnostic": [
+        "Patch Test",
+        "Wood's Light"
+      ]
+    },
+    "break_of_practice_applies": true,
+    "required_courses": {
+      "injectables_course": "Certification in cosmetic injectables (Botox, fillers)",
+      "laser_course": "Certification in laser treatments and light-based therapies"
+    }
+  }
+}
+
