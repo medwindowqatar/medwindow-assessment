@@ -1,0 +1,134 @@
+{
+  "break_in_practice_rules": {
+    
+    "overseas": [
+      {
+        "maxYears": 1,
+        "supervisedPracticeMonths": 0,
+        "note": "Break less than 1 year – no recency requirement"
+      },
+      {
+        "minYears": 1,
+        "maxYears": 3,
+        "supervisedPracticeMonths": 6,
+        "note": "Break 1–3 years – complete 6 months full‑time practice outside Qatar"
+      },
+      {
+        "minYears": 3,
+        "maxYears": 5,
+        "supervisedPracticeMonths": 12,
+        "note": "Break 3–5 years – complete 12 months full‑time practice outside Qatar"
+      },
+      {
+        "minYears": 5,
+        "maxYears": 7,
+        "supervisedPracticeMonths": 18,
+        "note": "Break 5–7 years – complete 18 months full‑time practice outside Qatar"
+      },
+      {
+        "minYears": 7,
+        "maxYears": 10,
+        "supervisedPracticeMonths": 24,
+        "note": "Break 7–10 years – complete 24 months full‑time practice outside Qatar"
+      },
+      {
+        "minYears": 10,
+        "eligible": false,
+        "note": "Break >10 years – not eligible"
+      }
+    ],
+
+    
+    "qatarResidents": [
+      {
+        "minExperienceYears": 5,
+        "maxExperienceYears": 10,
+        "breakBands": [
+          { "maxYears": 2, "supervisedPracticeMonths": 0, "note": "Break ≤2 years – no supervised practice" },
+          { "minYears": 2, "maxYears": 5, "supervisedPracticeMonths": 6, "note": "Break 2–5 years – 6 months supervised practice" },
+          { "minYears": 5, "maxYears": 7, "supervisedPracticeMonths": 12, "note": "Break 5–7 years – 12 months supervised practice" },
+          { "minYears": 7, "maxYears": 10, "supervisedPracticeMonths": 18, "note": "Break 7–10 years – 18 months supervised practice" },
+          { "minYears": 10, "caseByCase": true, "note": "Break >10 years – case‑by‑case evaluation" }
+        ]
+      },
+      {
+        "minExperienceYears": 10,
+        "maxExperienceYears": 15,
+        "breakBands": [
+          { "maxYears": 3, "supervisedPracticeMonths": 0, "note": "Break ≤3 years – no supervised practice" },
+          { "minYears": 3, "maxYears": 5, "supervisedPracticeMonths": 6, "note": "Break 3–5 years – 6 months supervised practice" },
+          { "minYears": 5, "maxYears": 7, "supervisedPracticeMonths": 9, "note": "Break 5–7 years – 9 months supervised practice" },
+          { "minYears": 7, "maxYears": 10, "supervisedPracticeMonths": 12, "note": "Break 7–10 years – 12 months supervised practice" },
+          { "minYears": 10, "caseByCase": true, "note": "Break >10 years – case‑by‑case evaluation" }
+        ]
+      },
+      {
+        "minExperienceYears": 15,
+        "breakBands": [
+          { "maxYears": 4, "supervisedPracticeMonths": 0, "note": "Break ≤4 years – no supervised practice" },
+          { "minYears": 4, "maxYears": 7, "supervisedPracticeMonths": 6, "note": "Break 4–7 years – 6 months supervised practice" },
+          { "minYears": 7, "maxYears": 10, "supervisedPracticeMonths": 12, "note": "Break 7–10 years – 12 months supervised practice" },
+          { "minYears": 10, "caseByCase": true, "note": "Break >10 years – case‑by‑case evaluation" }
+        ]
+      }
+    ],
+
+    
+    "acceptableBreakExceptions": {
+      "maternityPaternity": {
+        "description": "Maternity or paternity leave",
+        "maxDurationMonths": 12,
+        "documentationRequired": "Birth certificate or official leave documentation",
+        "countsAsBreak": false
+      },
+      "medicalLeave": {
+        "description": "Medical leave due to personal health issues",
+        "maxDurationMonths": 12,
+        "documentationRequired": "Medical reports and doctor’s certificate",
+        "countsAsBreak": false
+      },
+      "furtherEducation": {
+        "description": "Enrolled in full‑time accredited medical education/training program",
+        "maxDurationMonths": null,
+        "documentationRequired": "Enrollment certificate and completion certificate",
+        "countsAsBreak": false
+      },
+      "researchAcademic": {
+        "description": "Research or academic sabbatical with some clinical component",
+        "maxDurationMonths": 24,
+        "documentationRequired": "University/institution letter confirming role and clinical component",
+        "countsAsBreak": "partial",
+        "note": "Must demonstrate some clinical involvement"
+      },
+      "covidRelated": {
+        "description": "COVID‑19 pandemic related interruptions (2020–2022)",
+        "maxDurationMonths": 18,
+        "documentationRequired": "Employer letter or official documentation",
+        "countsAsBreak": false
+      }
+    },
+
+    
+    "calculationNotes": [
+      "Break is calculated from the last day of clinical practice to the application date.",
+      "Only qualifying clinical experience counts – see workplace type criteria.",
+      "Observerships, training without patient care and administrative roles are considered a break.",
+      "Multiple short breaks are cumulative.",
+      "Exceptions must be documented and verified."
+    ]
+  },
+
+  "internship_requirements": {
+    "physicians": {
+      "minimumMonths": 12,
+      "description": "Minimum 12 months rotating internship required.",
+      "mustBePostGraduation": true
+    },
+    "dentists": {
+      "minimumMonths": 12,
+      "description": "Minimum 12 months general dentistry internship required.",
+      "mustBePostGraduation": true
+    }
+  }
+}
+
