@@ -1,0 +1,49 @@
+{
+  "physicians": {
+    "Category 1": [
+      "CCT (UK)",
+      "ABMS Board Certification (USA)",
+      "FRCSC (Canada)",
+      "FRCR (UK)",
+      "MRCP (UK)",
+      "FRCA (UK)",
+      "MRCOG (UK)",
+      "MRCS/FRCS (UK/Ireland/Canada/Australia)",
+      "FRCPath (UK)",
+      "MRCPCH (UK)",
+      "Fellowship of the Royal Australasian College of Physicians",
+      "Fellowship of the Royal College of Physicians of Canada"
+    ],
+    "Category 2": [
+      "Arab Board of Health Specializations",
+      "Jordanian Board",
+      "DM (India)",
+      "MCh (India)",
+      "DNB (India)",
+      "FCPS (Pakistan)",
+      "MCPS (Pakistan)",
+      "MDS (India)",
+      "MSc Clinical Dentistry (non‑EU)",
+      "German Facharzt",
+      "French DES",
+      "Italian Specializzazione"
+    ],
+    "Other (specify)": []
+  },
+  "dentists": {
+    "Category 1": [
+      "FRCD(C) (Canada)",
+      "FRACDS (ANZ)",
+      "MFDS (UK)",
+      "MJDF (UK)",
+      "MOMS RCS (UK)"
+    ],
+    "Category 2": [
+      "Arab Board (Dental)",
+      "Jordanian Board (Dental)",
+      "MDS (India)",
+      "FCPS (Dent) \u2013 Pakistan"
+    ],
+    "Other (specify)": []
+  }
+}
