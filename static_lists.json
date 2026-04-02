@@ -1,0 +1,67 @@
+{
+  "visa_statuses": [
+    {"id":"none","label":"Not currently in Qatar (overseas applicant)"},
+    {"id":"family_qatari","label":"Qatari national"},
+    {"id":"family_offspring_qw","label":"Offspring of Qatari woman"},
+    {"id":"family_offspring_resident","label":"Offspring of Qatar resident (family sponsorship QID)"},
+    {"id":"family_spouse","label":"Spouse of Qatar resident (family sponsorship QID)"},
+    {"id":"work","label":"Qatar resident – Work visa / employer sponsorship"},
+    {"id":"other_visa","label":"Qatar resident – Other visa type"}
+  ],
+  "target_sectors": [
+    {"id":"gov","label":"Government / Semi-Government (HMC, PHCC, Sidra, etc.)"},
+    {"id":"private","label":"Private Sector (Hospital, Clinic, Medical Center)"}
+  ],
+  "workplaceTypes": [
+    {"id":"gov","label":"Government Hospital","qualifies":true,"cat3_qualifies":true},
+    {"id":"semi_gov","label":"Semi-Government Hospital","qualifies":true,"cat3_qualifies":true},
+    {"id":"teaching_gov","label":"Government Training/Teaching Hospital","qualifies":true,"cat3_qualifies":true},
+    {"id":"teaching_private","label":"Private Training/Teaching Hospital (with Residency Programs)","qualifies":true,"cat3_qualifies":true},
+    {"id":"university","label":"University Hospital","qualifies":true,"cat3_qualifies":true},
+    {"id":"military","label":"Military Hospital","qualifies":true,"cat3_qualifies":true},
+    {"id":"private_accredited","label":"Private Hospital (JCI/CBAHI/nationally accredited)","qualifies":true,"cat3_qualifies":false},
+    {"id":"private_clinic","label":"Private Clinic / Polyclinic / Medical Center","qualifies":false,"cat3_qualifies":false},
+    {"id":"academic_clinical","label":"Academic/Research Institution (Clinical role)","qualifies":true,"cat3_qualifies":false},
+    {"id":"academic_non","label":"Academic/Research Institution (Non-Clinical)","qualifies":false,"cat3_qualifies":false},
+    {"id":"agency","label":"Healthcare Agency","qualifies":false,"cat3_qualifies":false},
+    {"id":"other","label":"Other","qualifies":false,"cat3_qualifies":false}
+  ],
+  "physicianSpecialties": [
+    "Anesthesia","Anatomic Pathology","Cardiology","Cardiothoracic Surgery","Clinical Genetics",
+    "Clinical Hematology","Clinical Immunology","Clinical Oncology","Clinical Pathology",
+    "Community Medicine","Dermatology","Emergency Medicine","Endocrinology",
+    "Family Medicine","Forensic Medicine","Gastroenterology","General Surgery",
+    "Geriatric Medicine","Infectious Diseases","Internal Medicine","Interventional Radiology",
+    "Medical Oncology","Neonatology","Nephrology","Neurology","Neurosurgery",
+    "Nuclear Medicine","Obstetrics & Gynecology","Ophthalmology","Orthopedic Surgery",
+    "Otolaryngology (ENT)","Pain Medicine","Palliative Medicine","Pediatrics",
+    "Pediatric Surgery","Physical Medicine & Rehabilitation","Plastic Surgery",
+    "Psychiatry","Public Health","Pulmonology","Radiology","Rheumatology",
+    "Sports Medicine","Urology","Vascular Surgery"
+  ],
+  "dentistSpecialties": [
+    "General Dentistry","Endodontics","Oral & Maxillofacial Surgery","Oral Medicine",
+    "Oral and Maxillofacial Radiology","Oral Pathology","Oral Surgery","Orofacial Pain",
+    "Orthodontics","Pedodontics","Periodontics","Prosthodontics",
+    "Public Health Dentistry","Restorative Dentistry"
+  ],
+  "gp_exam_exemptions": [
+    {"id":"ifom","name":"IFOM Clinical Science Exam (CSE) – min score 60"},
+    {"id":"usmle2","name":"USMLE Step 2"},
+    {"id":"plab1","name":"PLAB Part 1 (UK)"},
+    {"id":"mccqe1","name":"MCCQE Part 1 (Canada)"},
+    {"id":"amc","name":"AMC MCQ (Australia)"},
+    {"id":"pres2","name":"PRES-MCQ Part 2 (Ireland)"},
+    {"id":"mrcgp_akt","name":"MRCGP Part 1 AKT"}
+  ],
+  "break_reasons": [
+    {"id":"maternity","label":"Maternity / Paternity leave"},
+    {"id":"family","label":"Family obligations"},
+    {"id":"illness","label":"Personal illness"},
+    {"id":"study","label":"Further education / Study"},
+    {"id":"relocation","label":"Relocation / Immigration process"},
+    {"id":"career_change","label":"Temporary career change"},
+    {"id":"sabbatical","label":"Sabbatical"},
+    {"id":"other","label":"Other reason"}
+  ]
+}

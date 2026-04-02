@@ -1,0 +1,48 @@
+{
+  "category_1": [
+    {"id":"d1_australia","name":"Specialist Registration with Dental Board of Australia","country":"Australia"},
+    {"id":"d1_canada_prog","name":"Dental Specialty Program (Approved by Canadian Dental Association)","country":"Canada"},
+    {"id":"d1_canada_ndsc","name":"National Dental Specialty Certificate (NDSC)","country":"Canada"},
+    {"id":"d1_canada_frcd","name":"Fellowship of the Royal College of Dentists of Canada (FRCD(C))","country":"Canada"},
+    {"id":"d1_denmark_os","name":"Specialist Certificate in Oral Surgery/OMS – State Board of Health (5yr program)","country":"Denmark"},
+    {"id":"d1_denmark_ortho","name":"Specialist Certificate in Orthodontics – State Board of Health (3yr program)","country":"Denmark"},
+    {"id":"d1_finland","name":"Specialist Certificate in Orthodontics or Oral Surgery (Finland)","country":"Finland"},
+    {"id":"d1_france_du","name":"Diploma d'Universités (DU) – Orthodontics, Oral Surgery, Oral Medicine (France)","country":"France"},
+    {"id":"d1_france_des","name":"DES in Orthodontics / Diplôme d'orthopédie dento-faciale (France)","country":"France"},
+    {"id":"d1_germany","name":"Fachzahnarzt (Specialist Dentist) – Landeszahnärztekammer (Germany)","country":"Germany"},
+    {"id":"d1_ireland_rc","name":"Membership/Fellowship of Royal College + CSCST (Ireland Dental)","country":"Ireland"},
+    {"id":"d1_ireland_pre96","name":"Membership/Fellowship of Royal Colleges before 1996 (Ireland Dental)","country":"Ireland"},
+    {"id":"d1_italy","name":"Diploma di Specialista (Dental) – Italian University","country":"Italy"},
+    {"id":"d1_netherlands","name":"Registration in Specialist Register (Dental) – Netherlands","country":"Netherlands"},
+    {"id":"d1_nz","name":"Fellowship of the Royal Australasian College of Dental Surgeons (NZ)","country":"New Zealand"},
+    {"id":"d1_norway","name":"Specialist in Dental Practice – Norwegian Directorate of Health","country":"Norway"},
+    {"id":"d1_sweden","name":"Bevis om specialistkompetens som tandläkare – Socialstyrelsen (Sweden)","country":"Sweden"},
+    {"id":"d1_uk_rc","name":"Membership/Fellowship from Royal Colleges + CCST/CCT (UK Dental)","country":"United Kingdom"},
+    {"id":"d1_uk_pre96","name":"Membership/Fellowship from Royal Colleges before 1996 (UK Dental)","country":"United Kingdom"},
+    {"id":"d1_usa","name":"Certificate of Specialty (ADA-recognized Specialty Board) – USA","country":"United States"},
+    {"id":"d1_swiss","name":"Swiss Specialist Dentist Diploma – FDHA","country":"Switzerland"},
+    {"id":"d1_arab_gcc","name":"Arab Board for Dental Specialties (from GCC countries)","country":"GCC"},
+    {"id":"d1_saudi_board","name":"Saudi Dental Board – SCFHS","country":"Saudi Arabia"},
+    {"id":"d1_kuwait_board","name":"Kuwait Dental Board","country":"Kuwait"}
+  ],
+  "category_2": [
+    {"id":"d2_arab_nongcc","name":"Arab Board for Dental Specialties (from non-GCC Arab Countries)","country":"Arab Countries"},
+    {"id":"d2_egypt_doc","name":"Doctoral Degree – Clinical Program (Egypt)","country":"Egypt"},
+    {"id":"d2_india_mds","name":"MDS (India)","country":"India"},
+    {"id":"d2_jordan_board","name":"Jordanian Board (Dental)","country":"Jordan"},
+    {"id":"d2_pakistan_fcps","name":"FCPS (Dent) – Pakistan","country":"Pakistan"}
+  ],
+  "category_2_star": [
+    {"id":"d2s_egypt_master","name":"Master's Degree – Clinical Program (Egypt)","country":"Egypt"},
+    {"id":"d2s_egypt_cert","name":"Certificate of Completing Specialty Training Program (Egypt)","country":"Egypt"}
+  ],
+  "category_2_star_note": "Category 2** requires THREE years post-graduate experience for Specialty Title. For Qataris/family sponsored: TWO years.",
+  "category_3_note": "Dentists with post-graduate degrees NOT in the approved list: Cannot be Specialist. Can apply as General Dentist + Prometric + non-core privileges.",
+  "specialty_min_program_years": {
+    "Periodontics": 2, "Pedodontics": 2, "Endodontics": 2,
+    "Prosthodontics": 2, "Oral Medicine": 2, "Public Health Dentistry": 2,
+    "Orofacial Pain": 2, "Oral and Maxillofacial Radiology": 2,
+    "Restorative Dentistry": 2,
+    "Oral Surgery": 3, "Orthodontics": 3, "Oral and Maxillofacial Surgery": 3
+  }
+}
