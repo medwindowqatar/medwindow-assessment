@@ -9,9 +9,9 @@ document.addEventListener('DOMContentLoaded',async()=>{
 });
 async function loadData(){
     const[pq,dq,st]=await Promise.all([
-        fetch('data/qualifications_physicians.json').then(r=>r.json()),
-        fetch('data/qualifications_dentists.json').then(r=>r.json()),
-        fetch('data/static_lists.json').then(r=>r.json())
+        fetch('qualifications_physicians.json').then(r=>r.json()),
+        fetch('qualifications_dentists.json').then(r=>r.json()),
+        fetch('static_lists.json').then(r=>r.json())
     ]); PHYS_QUALS=pq; DENT_QUALS=dq; STATIC=st;
 }
 function init(){
