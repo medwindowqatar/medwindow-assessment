@@ -9,9 +9,9 @@ document.addEventListener('DOMContentLoaded',async()=>{
 });
 async function loadData(){
     const[pq,dq,st]=await Promise.all([
-        fetch('qualifications_physicians.json').then(r=>r.json()),
-        fetch('qualifications_dentists.json').then(r=>r.json()),
-        fetch('static_lists.json').then(r=>r.json())
+        fetch('data/qualifications_physicians.json').then(r=>r.json()),
+        fetch('data/qualifications_dentists.json').then(r=>r.json()),
+        fetch('data/static_lists.json').then(r=>r.json())
     ]); PHYS_QUALS=pq; DENT_QUALS=dq; STATIC=st;
 }
 function init(){
@@ -45,7 +45,8 @@ function isOverseas(){return gv('visaStatus')==='none';}
 function setupEvents(){
     document.getElementById('nextBtn').addEventListener('click',handleNext);
     document.getElementById('prevBtn').addEventListener('click',handlePrev);
-    document.getElementById('assessment-form').addEventListener('submit',handleSubmit);
+    document.getElementById('assessment-form').addEventListener('submit',function(e){e.preventDefault();handleSubmit(e);});
+    document.getElementById('submitBtn').addEventListener('click',function(e){e.preventDefault();handleSubmit(e);});
     document.getElementById('addExperienceBtn').addEventListener('click',addExp);
     document.getElementById('profession').addEventListener('change',onProfessionChange);
 
@@ -523,16 +524,29 @@ function populateReview(){
 }
 
 async function handleSubmit(e){
-    e.preventDefault();if(!validateStep()){showValMsg();return;}
-    const form=e.target,fd=new FormData(form),data=Object.fromEntries(fd.entries());
+    if(e&&e.preventDefault)e.preventDefault();
+    if(!validateStep()){
+        showValMsg();
+        // Scroll to validation message so user sees it
+        const msg=document.querySelector(`[data-step="${currentStep}"] .validation-msg`);
+        if(msg)msg.scrollIntoView({behavior:'smooth',block:'center'});
+        return;
+    }
+    const form=document.getElementById('assessment-form');
+    const fd=new FormData(form),data=Object.fromEntries(fd.entries());
     data.healthcareSector=Array.from(form.querySelectorAll('input[name="healthcareSector"]:checked')).map(c=>c.value).join(', ');
     data.assistance=Array.from(form.querySelectorAll('input[name="assistance"]:checked')).map(c=>c.value).join(', ');
     const exps=[];document.querySelectorAll('[id^="experience-"]').forEach(e=>{const id=e.id.split('-')[1];
         exps.push({from:data[`exp_from_${id}`],to:data[`exp_to_${id}`],workplace:data[`exp_workplace_${id}`],type:data[`exp_type_${id}`],country:data[`exp_country_${id}`]});});
     data.experienceEntriesJson=JSON.stringify(exps);
-    const el=calcEligibility(data);
-    data.eligibilityStatus=el.status;data.eligibilitySummary=el.summary;data.eligibilityScope=el.scope;
-    data.eligibilityExam=el.examRequired;data.eligibilitySupervision=el.supervisionRequired;data.eligibilityDataflow=el.dataflowAction;
+    try{
+        const el=calcEligibility(data);
+        data.eligibilityStatus=el.status;data.eligibilitySummary=el.summary;data.eligibilityScope=el.scope;
+        data.eligibilityExam=el.examRequired;data.eligibilitySupervision=el.supervisionRequired;data.eligibilityDataflow=el.dataflowAction;
+    }catch(err){
+        console.error('Eligibility calc error:',err);
+        data.eligibilityStatus='NEEDS_REVIEW';data.eligibilitySummary='Error in auto-assessment. Manual review required. Error: '+err.message;
+    }
     const btn=document.getElementById('submitBtn');btn.disabled=true;btn.innerHTML='<span class="spinner"></span> Submitting...';
     try{await fetch(CONFIG.GOOGLE_SHEETS_URL,{method:'POST',mode:'no-cors',cache:'no-cache',headers:{'Content-Type':'application/json'},body:JSON.stringify(data)});
         showSuccess(data.fullName);}catch(err){console.error(err);showSuccess(data.fullName);}
