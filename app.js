@@ -45,8 +45,7 @@ function isOverseas(){return gv('visaStatus')==='none';}
 function setupEvents(){
     document.getElementById('nextBtn').addEventListener('click',handleNext);
     document.getElementById('prevBtn').addEventListener('click',handlePrev);
-    document.getElementById('assessment-form').addEventListener('submit',function(e){e.preventDefault();handleSubmit(e);});
-    document.getElementById('submitBtn').addEventListener('click',function(e){e.preventDefault();handleSubmit(e);});
+    document.getElementById('submitBtn').addEventListener('click',function(e){e.preventDefault();handleSubmit();});
     document.getElementById('addExperienceBtn').addEventListener('click',addExp);
     document.getElementById('profession').addEventListener('change',onProfessionChange);
 
@@ -523,17 +522,15 @@ function populateReview(){
         <div class="review-section"><strong>DataFlow:</strong> ${data.dataflowStatus||'-'} | Good Standing: ${data.goodStanding||'-'}</div>`;
 }
 
-async function handleSubmit(e){
-    if(e&&e.preventDefault)e.preventDefault();
+async function handleSubmit(){
     if(!validateStep()){
         showValMsg();
-        // Scroll to validation message so user sees it
-        const msg=document.querySelector(`[data-step="${currentStep}"] .validation-msg`);
+        var msg=document.querySelector('[data-step="'+currentStep+'"] .validation-msg');
         if(msg)msg.scrollIntoView({behavior:'smooth',block:'center'});
         return;
     }
-    const form=document.getElementById('assessment-form');
-    const fd=new FormData(form),data=Object.fromEntries(fd.entries());
+    var form=document.getElementById('assessment-form');
+    var fd=new FormData(form),data=Object.fromEntries(fd.entries());
     data.healthcareSector=Array.from(form.querySelectorAll('input[name="healthcareSector"]:checked')).map(c=>c.value).join(', ');
     data.assistance=Array.from(form.querySelectorAll('input[name="assistance"]:checked')).map(c=>c.value).join(', ');
     const exps=[];document.querySelectorAll('[id^="experience-"]').forEach(e=>{const id=e.id.split('-')[1];
