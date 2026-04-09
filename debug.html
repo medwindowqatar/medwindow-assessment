@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head><title>Debug</title></head>
+<body style="font-family:monospace;padding:20px;font-size:14px;background:#111;color:#0f0">
+<h2>MedWindow Debug Console</h2>
+<div id="log"></div>
+<script>
+function log(msg, color) {
+    const d = document.createElement('div');
+    d.style.padding = '4px 0';
+    d.style.color = color || '#0f0';
+    d.textContent = (new Date()).toLocaleTimeString() + ' | ' + msg;
+    document.getElementById('log').appendChild(d);
+}
+
+// Test 1: Can we load config.js?
+log('Testing config.js...');
+const s1 = document.createElement('script');
+s1.src = 'config.js';
+s1.onload = function() {
+    log('✅ config.js loaded');
+    if (typeof CONFIG !== 'undefined') {
+        log('✅ CONFIG object exists: ' + CONFIG.GOOGLE_SHEETS_URL.substring(0, 50) + '...');
+    } else {
+        log('❌ CONFIG object NOT defined', 'red');
+    }
+};
+s1.onerror = function() { log('❌ config.js FAILED to load', 'red'); };
+document.head.appendChild(s1);
+
+// Test 2: Can we load JSON files?
+['static_lists.json', 'qualifications_physicians.json', 'qualifications_dentists.json'].forEach(function(file) {
+    fetch(file).then(function(r) {
+        if (r.ok) {
+            r.json().then(function(d) {
+                log('✅ ' + file + ' loaded (' + Object.keys(d).length + ' top-level keys)');
+            }).catch(function(e) {
+                log('❌ ' + file + ' loaded but INVALID JSON: ' + e.message, 'red');
+            });
+        } else {
+            log('❌ ' + file + ' HTTP ' + r.status, 'red');
+        }
+    }).catch(function(e) {
+        log('❌ ' + file + ' network error: ' + e.message, 'red');
+    });
+});
+
+// Test 3: Can we load app.js?
+setTimeout(function() {
+    log('Testing app.js...');
+    const s2 = document.createElement('script');
+    s2.src = 'app.js';
+    s2.onload = function() {
+        log('✅ app.js loaded');
+        // Check key functions exist
+        var fns = ['handleSubmit', 'handleNext', 'calcEligibility', 'validateStep', 'showStep', 'gv'];
+        fns.forEach(function(fn) {
+            if (typeof window[fn] === 'function') {
+                log('  ✅ ' + fn + '() exists');
+            } else {
+                log('  ❌ ' + fn + '() NOT FOUND', 'red');
+            }
+        });
+    };
+    s2.onerror = function() { log('❌ app.js FAILED to load', 'red'); };
+    document.head.appendChild(s2);
+}, 1000);
+
+// Test 4: Check for any JS errors
+window.onerror = function(msg, url, line, col, error) {
+    log('❌ JS ERROR: ' + msg + ' at ' + url + ':' + line, 'red');
+};
+</script>
+</body>
+</html>
