@@ -5,13 +5,20 @@ let currentStep=1; const totalSteps=11; let experienceCounter=0;
 
 document.addEventListener('DOMContentLoaded',async()=>{
     try{ await loadData(); init(); setupEvents(); showStep(1); }
-    catch(e){ console.error(e); alert('Error loading. Please refresh.'); }
+    catch(e){ 
+        console.error('First load failed, retrying...',e);
+        // Retry once after 1 second
+        setTimeout(async()=>{
+            try{ await loadData(); init(); setupEvents(); showStep(1); }
+            catch(e2){ console.error('Retry failed:',e2); document.body.innerHTML='<div style="padding:40px;text-align:center;font-family:sans-serif"><h2>Loading Error</h2><p>Please refresh the page (Ctrl+R)</p><p style="color:#999;font-size:12px">'+e2.message+'</p></div>'; }
+        },1000);
+    }
 });
 async function loadData(){
     const[pq,dq,st]=await Promise.all([
-        fetch('data/qualifications_physicians.json').then(r=>r.json()),
-        fetch('data/qualifications_dentists.json').then(r=>r.json()),
-        fetch('data/static_lists.json').then(r=>r.json())
+        fetch('qualifications_physicians.json').then(r=>r.json()),
+        fetch('qualifications_dentists.json').then(r=>r.json()),
+        fetch('static_lists.json').then(r=>r.json())
     ]); PHYS_QUALS=pq; DENT_QUALS=dq; STATIC=st;
 }
 function init(){
