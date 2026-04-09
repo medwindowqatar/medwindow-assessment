@@ -1,5 +1,5 @@
 const CONFIG = {
-    GOOGLE_SHEETS_URL: 'https://script.google.com/macros/s/AKfycbwbm_UMBVs7eAMCU64bK1FBQLv3unp9o3W9uQwmFVh4LMGS3dM8N98nF1vnw_5sEsPb/exec',
+    GOOGLE_SHEETS_URL: 'https://script.google.com/macros/s/AKfycbwklR7szTw3qPe-1DXNwZmav0Pu-eb5bs1dRzZxef7JGuYoDkKFUA5QN-RLvOJQh4OQ/exec',
     CONTACT_INFO: {
         phone: '+974 74749336',
         email: 'medwindowqatar@gmail.com',
