@@ -15,10 +15,11 @@ document.addEventListener('DOMContentLoaded',async()=>{
     }
 });
 async function loadData(){
+    function checkOk(r,name){if(!r.ok)throw new Error('HTTP '+r.status+' loading '+name);return r.json();}
     const[pq,dq,st]=await Promise.all([
-        fetch('qualifications_physicians.json').then(r=>r.json()),
-        fetch('qualifications_dentists.json').then(r=>r.json()),
-        fetch('static_lists.json').then(r=>r.json())
+        fetch('./qualifications_physicians.json').then(r=>checkOk(r,'qualifications_physicians.json')),
+        fetch('./qualifications_dentists.json').then(r=>checkOk(r,'qualifications_dentists.json')),
+        fetch('./static_lists.json').then(r=>checkOk(r,'static_lists.json'))
     ]); PHYS_QUALS=pq; DENT_QUALS=dq; STATIC=st;
 }
 function init(){
@@ -558,6 +559,8 @@ async function handleSubmit(){
 function showSuccess(name){
     document.getElementById('assessment-container').classList.add('hidden');
     document.querySelector('.progress-wrapper').classList.add('hidden');
+    document.querySelector('.sticky-nav').classList.add('hidden');
+    const banner=document.getElementById('info-banner');if(banner)banner.classList.add('hidden');
     document.getElementById('success-message').classList.remove('hidden');
     document.getElementById('user-name-display').textContent=name;
     window.scrollTo({top:0,behavior:'smooth'});
